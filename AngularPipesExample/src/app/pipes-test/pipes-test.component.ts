@@ -6,7 +6,8 @@ registerLocaleData(LocaleRu, "ru");
 @Component({
   selector: 'app-pipes-test',
   // templateUrl: './pipes-test.component.html',
-  template: `<div>Uppercase: {{str|uppercase}}</div>
+  template: `<div>Pipe Chain: {{greetings | slice : 6 : 11 | uppercase }}</div>
+  <div>Uppercase: {{str|uppercase}}</div>
   <div>Uppercase: {{str|lowercase}}</div>
   <div>Lowercase: {{num|number}}</div>
   <div>Percent: {{num|percent}}</div>
@@ -28,6 +29,7 @@ registerLocaleData(LocaleRu, "ru");
 })
 export class PipesTestComponent implements OnInit {
   str: string = "London is a capital of Great Britain.";
+  greetings: string = "Hello World!";
   num: number = 0.14;
   pi: number = 3.1415;
   money: number = 23.45;

@@ -1,0 +1,9 @@
+<h3>Example of Date Pipe</h3>
+<div>Date from Object: {{dateObject | date }}</div>
+<div>Date from String: {{dateString | date }}</div>
+<div>Date from Number: {{dateNumber | date : "longDate": "UTC": "ru"}}</div>
+<div>Short Date: {{dateObject | date: "shortDate" }}</div>
+<div>Medium Date: {{dateObject | date : "mediumDate"}}</div>
+<div>Long Date: {{dateObject | date : "longDate"}}</div>
+<div>Custom Date: {{dateObject | date : "dd-MM-yyyy"}}</div>
+<div>Time Zone UTC: {{dateObject | date : "dd-MM-yyyy" : "UTC"}}</div>
